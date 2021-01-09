@@ -15,6 +15,9 @@
         }
         body{
             background: linear-gradient(to left, #607d8b,#d459cb);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -142,9 +145,9 @@
             display: none;
         }
         label{
-            position: absolute;
-            top: 19%;
-            right: 40%;
+            position: relative;
+            left: 35%;
+            top: -20px;
             height: 50px;
             width: 80px;
             border: 2px solid gray;
@@ -181,16 +184,17 @@
         #switch-button:checked ~ label{
             box-shadow: 0px 0px 15px 5px whitesmoke;
         }  
-        
+
     </style>
 </head>
 <body>
-    <input type="checkbox"  id="switch-button" onclick="darkLight()">
-    <label for="switch-button">
-        <i class="fa fa-sun"></i>
-        <i class="fa fa-moon"></i>
-    </label>
+   
     <div class="wrap">
+        <input type="checkbox"  id="switch-button" onclick="darkLight()">
+        <label for="switch-button">
+            <i class="fa fa-sun"></i>
+            <i class="fa fa-moon"></i>
+        </label>
         <div id="timer">
             <svg width="260" height="260">
                  <circle class="defaultCircle" cx="125" cy="125" r="120" style="stroke: #ff88fb;" stroke-width="10" fill="none" stroke-linecap="round"/>
